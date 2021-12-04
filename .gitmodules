@@ -1,3 +1,18 @@
 [submodule "themes/hello-friend"]
 	path = themes/hello-friend
 	url = https://github.com/panr/hugo-theme-hello-friend.git
+[submodule "themes/eureka"]
+	path = themes/eureka
+	url = https://github.com/wangchucheng/hugo-eureka.git
+[submodule "themes/hyde"]
+	path = themes/hyde
+	url = https://github.com/spf13/hyde.git
+[submodule "themes/cupper-hugo-theme"]
+	path = themes/cupper-hugo-theme
+	url = https://github.com/zwbetz-gh/cupper-hugo-theme.git
+[submodule "themes/hugo-black-and-light-theme"]
+	path = themes/hugo-black-and-light-theme
+	url = https://github.com/davidhampgonsalves/hugo-black-and-light-theme
+[submodule "themes/hugo-tanka"]
+	path = themes/hugo-tanka
+	url = https://github.com/nanxstats/hugo-tanka.git
