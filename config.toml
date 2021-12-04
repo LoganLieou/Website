@@ -1,8 +1,9 @@
-baseURL = 'http://example.org/'
+baseURL = '/'
 languageCode = 'en-us'
-title = 'Jeboira.co'
-theme = "ananke"
+title = "Jeboira.co"
+subtitle = "A simple website"
+theme = "hello-friend"
+publishdir = "docs"
 
-[[params.ananke_socials]]
-	name="github"
-	url="https://github.com/LoganLieou"
+[params.logo]
+logoText = "Jeboira.co"
