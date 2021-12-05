@@ -7,8 +7,7 @@ theme = "hyde"
 [menus]
   main = [
     {Name = "Github", URL = "https://github.com/LoganLieou/"},
-    {Name = "Twitter", URL = "https://twitter.com/eeayor"},
-    {Name = "Archive", URL = "/archive"}
+    {Name = "Twitter", URL = "https://twitter.com/eeayor"}
   ]
 
 [params]
