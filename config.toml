@@ -7,5 +7,14 @@ theme = "hello-friend"
 [menus]
   main = [
     {Name = "Github", URL = "https://github.com/LoganLieou/"},
-    {Name = "Twitter", URL = "https://twitter.com/eeayor"}
+    {Name = "Twitter", URL = "https://twitter.com/eeayor"},
+    {Name = "Archive", URL = "/archive"}
   ]
+
+[params]
+  contentTypeName = "posts"
+  cover = "https://i.ytimg.com/vi/CFWuwNDOnIo/maxresdefault.jpg"
+
+[params.logo]
+  logoText = "Jeboria.co"
+  logoHomeLink = "/website"
