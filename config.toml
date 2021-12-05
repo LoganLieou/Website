@@ -1,8 +1,5 @@
 baseURL = 'https://loganlieou.github.io/website'
 languageCode = 'en-us'
 title = "Jeboira.co"
-subtitle = "A simple website"
-theme = "hello-friend"
+theme = "hyde"
 
-[params.logo]
-logoText = "Jeboira.co"
