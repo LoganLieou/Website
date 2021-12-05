@@ -1,5 +1,5 @@
 
-baseURL = 'https://loganlieou.github.io/website/'
+baseURL = "/website"
 languageCode = 'en-us'
 title = "Jeboria"
 author = "Logan Lieou"
