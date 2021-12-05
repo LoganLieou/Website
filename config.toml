@@ -1,10 +1,10 @@
-baseURL = 'https://loganlieou.github.io/'
+baseURL = 'https://loganlieou.github.io/website/'
 languageCode = 'en-us'
 title = "Jeboira"
 author = "Logan Lieou"
 theme = "hyde"
 
-[Menus]
+[menus]
   main = [
     {Name = "Github", URL = "https://github.com/LoganLieou/"},
     {Name = "Twitter", URL = "https://twitter.com/eeayor"}

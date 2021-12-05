@@ -1,8 +1,7 @@
 ---
 title: "Advent of Code Day 1"
 date: 2021-12-04T05:04:08-06:00
-draft: true
-meta_img: images/example.jpg
+draft: false
 ---
 
 Yes I will start to write about this and explain my reasoning and code that I wrote
