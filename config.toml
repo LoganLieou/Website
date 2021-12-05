@@ -1,9 +1,9 @@
 
-baseURL = "/website"
+baseURL = "https://loganlieou.github.io/website"
 languageCode = 'en-us'
 title = "Jeboria"
 author = "Logan Lieou"
-theme = "hyde"
+theme = "hello-friend"
 
 [Menus]
   main = [
@@ -13,5 +13,5 @@ theme = "hyde"
 
 [params]
   description = "Logan's Personal Blog / Website / Portfolio / Trash Bin"
-  # themeColor = "theme-base-08"
+  themeColor = "theme-base-08"
   layoutReverse = true
