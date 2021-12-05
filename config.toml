@@ -2,7 +2,7 @@ baseURL = 'https://loganlieou.github.io/website/'
 languageCode = 'en-us'
 title = "Jeboira"
 author = "Logan Lieou"
-theme = "hello-friend"
+theme = "hyde"
 
 [menus]
   main = [
@@ -12,9 +12,6 @@ theme = "hello-friend"
   ]
 
 [params]
-  contentTypeName = "posts"
-  cover = "https://i.ytimg.com/vi/CFWuwNDOnIo/maxresdefault.jpg"
-
-[params.logo]
-  logoText = "Jeboria.co"
-  logoHomeLink = "/website"
+  description = "Logan's Personal Blog / Website / Portfolio / Trash Bin"
+  themeColor = "theme-base-08"
+  layoutReverse = true
