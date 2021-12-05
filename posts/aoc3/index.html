@@ -1,0 +1,23 @@
+<!doctype html><html xmlns=http://www.w3.org/1999/xhtml xml:lang=en-us lang=en-us><head><link href=https://gmpg.org/xfn/11 rel=profile><meta charset=utf-8><meta name=generator content="Hugo 0.85.0"><meta name=viewport content="width=device-width,initial-scale=1"><title>Advent of Code Day 3 &#183; Jeboira</title><meta name=description content><link type=text/css rel=stylesheet href=https://loganlieou.github.io/website/css/print.css media=print><link type=text/css rel=stylesheet href=https://loganlieou.github.io/website/css/poole.css><link type=text/css rel=stylesheet href=https://loganlieou.github.io/website/css/syntax.css><link type=text/css rel=stylesheet href=https://loganlieou.github.io/website/css/hyde.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700"><link rel=apple-touch-icon-precomposed sizes=144x144 href=/apple-touch-icon-144-precomposed.png><link rel="shortcut icon" href=/favicon.png></head><body class="theme-base-08 layout-reverse"><aside class=sidebar><div class="container sidebar-sticky"><div class=sidebar-about><a href=https://loganlieou.github.io/website/><h1>Jeboira</h1></a><p class=lead>Logan's Personal Blog / Website / Portfolio / Trash Bin</p></div><nav><ul class=sidebar-nav><li><a href=https://loganlieou.github.io/website/>Home</a></li><li><a href=https://github.com/LoganLieou/>Github</a></li><li><a href=https://twitter.com/eeayor>Twitter</a></li></ul></nav><p>&copy; 2021. All rights reserved.</p></div></aside><main class="content container"><div class=post><h1>Advent of Code Day 3</h1><time datetime=2021-12-04T22:16:08-0600 class=post-date>Sat, Dec 4, 2021</time><p>On the third day of advent of code, the problems got
+more difficult, and this is where we get into problems
+that may not be just purely easy, the last two days
+were fairly stright forward as day one was just an array
+question and day 2 was a stack question, now day 3
+is somewhat of an array question but if you can find an
+optimal solution or not is another thing entirely.</p><h2 id=part-1>Part 1</h2><p>Part one is fairly easy as all you really have to do
+is find the most common bit and least common bit for
+each bit in the string, last you convert the most common
+strong and the least common string to base 10 and multiply them
+base 10 conversion in julia is very simple as all you have to
+do is this:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>parse(<span style=color:#66d9ef>Int</span>, value; base <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>)
+</code></pre></div><p>the implementations for most common and least common bit are as
+as follows</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia><span style=color:#66d9ef>function</span> most_common(array<span style=color:#f92672>::</span><span style=color:#66d9ef>Matrix</span>{<span style=color:#66d9ef>Int</span>}, col<span style=color:#f92672>::</span><span style=color:#66d9ef>Int</span>)<span style=color:#f92672>::</span><span style=color:#66d9ef>Int</span>
+	rows <span style=color:#f92672>=</span> size(arr, <span style=color:#ae81ff>1</span>)
+	num_ones <span style=color:#f92672>=</span> sum(arr[<span style=color:#f92672>:</span>, col])
+	num_zeros <span style=color:#f92672>=</span> rows <span style=color:#f92672>-</span> num_ones
+	<span style=color:#66d9ef>return</span> num_ones <span style=color:#f92672>&gt;=</span> num_zeros <span style=color:#f92672>?</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>:</span> <span style=color:#ae81ff>0</span>
+<span style=color:#66d9ef>end</span>
+</code></pre></div><p>and the least common bit take the xor of the most common bit
+string and 1.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-julia data-lang=julia>least_common(arr<span style=color:#f92672>::</span><span style=color:#66d9ef>Matrix</span>{<span style=color:#66d9ef>Int</span>}, col<span style=color:#f92672>::</span><span style=color:#66d9ef>Int</span>)<span style=color:#f92672>::</span><span style=color:#66d9ef>Int</span>
+	<span style=color:#f92672>=</span> (xor(most_common(arr, col), <span style=color:#ae81ff>1</span>))
+</code></pre></div></div></main></body></html>
