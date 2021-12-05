@@ -2,15 +2,10 @@ baseURL = 'https://loganlieou.github.io/website/'
 languageCode = 'en-us'
 title = "Jeboira"
 author = "Logan Lieou"
-theme = "hyde"
+theme = "hello-friend"
 
 [menus]
   main = [
     {Name = "Github", URL = "https://github.com/LoganLieou/"},
     {Name = "Twitter", URL = "https://twitter.com/eeayor"}
   ]
-
-[params]
-  description = "Logan's Personal Blog / Website / Portfolio / Trash Bin"
-  themeColor = "theme-base-08"
-  layoutReverse = true
