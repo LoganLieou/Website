@@ -12,14 +12,14 @@ like my website to respawn thank you very much.
 The first step and the first step to almost every AoC challenge is to read in the
 contents of a file to do this in julia simply:
 
-```swift
+```julia
 f = open("input.txt", "r"); lines = readlines(f); close(f)
 ```
 
 ### Sliding Window
 The first problem part 1
 
-```swift
+```julia
 fsol(input::Vector{Int})::Int =
 	map((a, b) -> a < b, input, @view(input[2:end])) |> count
 ```
