@@ -2,7 +2,7 @@ baseURL = 'https://loganlieou.github.io/website'
 languageCode = 'en-us'
 title = "Jeboria"
 author = "Logan Lieou"
-theme = "hyde"
+theme = "ananke"
 
 [Menus]
   main = [
