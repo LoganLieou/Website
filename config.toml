@@ -13,4 +13,4 @@ theme = "hyde"
 [params]
   description = "Logan's Personal Blog / Website / Portfolio / Trash Bin"
   themeColor = "theme-base-08"
-  layoutReverse = true
+
