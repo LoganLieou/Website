@@ -1,5 +1,6 @@
 ---
 title: "Seg Fault"
+date: 2022-02-01T21:03:16-06:00
 draft: false
 ---
 
