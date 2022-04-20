@@ -1,7 +1,7 @@
 ---
-title: "Seg_fault"
-date: 2022-02-02T10:40:23-06:00
-draft: true
+title: "Seg Fault"
+date: 2022-04-20T16:14:59-05:00
+draft: false
 ---
 
 The most common way I see seg fault happen is vectors / arrays with missallocated memory.
