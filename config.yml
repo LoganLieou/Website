@@ -16,7 +16,7 @@ menu:
 params:
     homeInfoParams:
         Title: "Hello World"
-        Content: "Nutted in your daughter you fuck"
+        Content: "std::cout << \"greetings\\n\";"
 
     socialIcons: # optional
         - name: "Github"
