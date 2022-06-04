@@ -1,0 +1,12 @@
+[submodule "themes/stack"]
+	path = themes/stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack
+[submodule "themes/novela"]
+	path = themes/novela
+	url = https://github.com/forestryio/hugo-theme-novela
+[submodule "hyde"]
+	path = hyde
+	url = https://github.com/spf13/hyde
+[submodule "themes/hyde"]
+	path = themes/hyde
+	url = https://github.com/spf13/hyde

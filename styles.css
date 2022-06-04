@@ -1,42 +1,72 @@
-body {
-	font-family: 'Libre Baskerville', serif;
-	width: 80%;
-	margin: auto;
-	background-color: #faf8f5;
-}
-
 h1 {
-	padding-top: 1.5rem;
-}
-
-hr {
-	opacity: 30%;
+	font-family: 'Libre Baskerville', serif;
 }
 
 p {
-	text-align: justify;
-	line-height: 1.5;
+	font-family: 'Libre Baskerville', serif;
+	margin: auto;
+	opacity: 75%;
 }
 
-.wrapper {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 3rem;
-	grid-auto-rows: minmax(100px, auto);
+body {
+	width: 80%;
+	margin: auto;
 }
 
-.one {
-	grid-column: 1/2;
-	grid-row: 1;
-}
-
-.two {
-	grid-column: 2/2;
-	grid-row: 1;
-	margin-top: 4rem;
-	margin-left: 80%;
+hr {
+	opacity: 40%;
 }
 
 a {
-	color: darkblue;
+	text-decoration: none;
+	color: black;
+}
+
+center {
+	margin-bottom: 7%;
+}
+
+.logo {
+	height: 64px;
+	width: 64px;
+	border-radius: 30px;
+	margin-top: 5%;
+}
+
+.card {
+	display: inline-block;
+	margin-left: .5rem;
+	margin-right: .5rem;
+	width: 30%;
+	position: relative;
+  text-align: center;
+  color: white;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	filter: grayscale(1);
+	transition: 400ms;
+}
+
+.card-img {
+	width: 100%;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	filter: grayscale(0);
+}
+
+.card-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 0%;
+	transform: translate(-50%, -50%);
+	font-size: 32pt;
+	padding: 7rem;
+}
+
+.card-text:hover {
+	opacity: 100%;
 }
