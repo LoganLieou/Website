@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rat
+* source:	https://sketchfab.com/3d-models/rat-59776b2fef0d4782a4dcf7096fbcf205
+* author:	molayemvand (https://sketchfab.com/molayemvand)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rat" (https://sketchfab.com/3d-models/rat-59776b2fef0d4782a4dcf7096fbcf205) by molayemvand (https://sketchfab.com/molayemvand) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

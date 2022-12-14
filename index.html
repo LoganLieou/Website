@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="icon" href="assets/favicon.gif"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>loganlieou.xyz</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+      body { background-color: #ffffff; margin: 0; }
+      canvas { width: 80%; height: 80%; }
+      #header-text { position: absolute; top: 3%; left: 2%; 
+        font-family: 'Roboto Mono', monospace; color: #000000; }
+      #info-text { position: absolute; text-align: justify; color: #000000;
+        left: 2%; top: 2.8%; font-family: 'Roboto Mono', monospace; }
+    </style>
+  </head>
+  <body>
+    <h1 id="header-text">LOGANLIEOU.XYZ</h1>
+    <div id="info-text">
+      Welcome to my website there is nothing here but three.js is cool so enjoy this spinning rat.
+    </div>
+    <script src="https://unpkg.com/three@0.147.0/build/three.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/PLYLoader.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script>
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 50000 );
+      const loader = new THREE.GLTFLoader();
+      
+      const renderer = new THREE.WebGLRenderer({ alpha: false });
+      renderer.setClearColor( 0xdfcfcf );
+      renderer.setPixelRatio( window.devicePixelRatio );
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      document.body.appendChild( renderer.domElement );
+
+      /*
+      controls initialization and attributes
+      */
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.update();
+      controls.autoRotate = true;
+
+      camera.position.set(0, 10000, 20000);
+
+      let model;
+      loader.load('./assets/rat/scene.gltf', ( gltf ) => {
+        model = gltf;
+        model.scene.scale.set(0.8, 0.8, 0.8);
+        console.log(model.scene.color);
+        console.log( model.asset );
+        scene.add(model.scene);
+      });
+
+      controls.update();
+
+      const animate = () => {
+        requestAnimationFrame( animate );
+        controls.update();
+        renderer.render( scene, camera );
+      }
+
+      animate();
+    </script>
+  </body>
+</html>
