@@ -1,87 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/favicon.gif"/>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="icon" href="assets/favicon.webp">
     <title>loganlieou.xyz</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-      body { margin: 0; }
-      h1 { position: absolute; top: 1rem; left: 2rem; 
-        font-family: 'Roboto Mono', monospace; color: white; }
-      #info-text { position: absolute; color: white; left: 2rem; top: 6rem; width: 30rem;
-        font-family: 'Roboto Mono', monospace; }
-      ul { margin: 0; background-color: black; position: absolute; top: 13rem; left: 2rem; }
-      li { background-color: black; color: white; font-family: 'Roboto Mono', monospace; }
-      button { all: unset; cursor: pointer; }
-      a { all: unset; cursor: pointer; }
-    </style>
   </head>
   <body>
-    <h1 id="header-text">LOGANLIEOU.XYZ</h1>
-    <div id="info-text">
-      Welcome to my Website, my name is Logan I am a 3rd year student at the University of Texas at Dallas, if you're here you may be interested in some of the following pages
-    </div>
-    <ul>
-      <li><a href="assets/resume.pdf"><u>Resume</u></a></li>
-      <li><a href="https://github.com/LoganLieou"><u>Github</u></button></a>
-      <li>
-  <a href="https://devpost.com/LoganLieou?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">
-        <u>Dev Post</u>
-        </a>
-        <li><a href="https://www.kaggle.com/jobaria"><u>Kaggle</u></button></a>
-    </ul>
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.147/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.147/examples/jsm/"
-        }
-      }
-    </script>
-    <script type="module">
-      import * as THREE from 'three'
-      import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
-      import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+    <main class="container">
+      <!--NAVBAR-->
+      <nav aria-label="breadcrumb">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assets/resume.pdf">Resume</a></li>
+          <li><a href="posts.html">Posts</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+      <h1>LOGAN LIEOU</h1>
+      <h3>Walmart SDE II Intern and A.S @ Collin College</h3>
+      </hgroup>
+      <hr/>
+      <!--WORK EXPERIENCE-->
+      <article>
+        <h2>Work Experience</h2>
+        <ul>
+          <li><b>Walmart Global Tech, <i>SDE II Intern</i></b></li>
+            <ul>
+              <li>
+                Extended picking event retention and analysis by engineering
+                Java Spring service to consume 50k+ picking events per minute
+                from Kafka, storing events in Cosmos Cassandra instance, and
+                exposing 10 API endpoints for usage in frontend data
+                visualization
+              </li>
+              <li>
+                Increased scope of analysis by 500% for Walmart engineers to determine long
+                term emergent trends in event data via custom visualizations using Next.js,
+                D3.js, and Tailwindcss
+              </li>
+              <li>
+                Aligned business requirements by engaging in daily standup with
+                team of Walmart Software Engineers, internal customers, and
+                other interns leading to 25% improved feature completion over
+                previous intern project
+              </li>
+            </ul>
+          <li><b>Dell Technologies, <i>Software Engineer Intern</i></b></li>
+          <ul>
+            <li>
+              Achieved ~80% increased throughput on set of APIs used by 20 interns
+            </li>
+            <li>
+              Allowed for seamless communication between front and backend
+              teams by producing RESTful API with 4 endpoints using Express.js
+              to communicate between Unity game engine VR space and Angular web
+              application portal
+            </li>
+          </ul>
+          <li><b>Texas Department of Transportation, <i>Summer Intern</i></b></li>
+          <ul>
+            <li>
+              Improved record archival by 300% automating proprietary process using python pandas
+            </li>
+            <li>
+              Decreased space requirements for legacy records by 80% compiling
+              300+ historic rail agreements from the past 100+ years
+            </li>
+          </ul>
+        </ul>
+      </article>
 
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 50000 );
-      const loader = new GLTFLoader();
-      const light = new THREE.AmbientLight( 0xffffff, 0.9 );
-      scene.add( light );
-      
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setPixelRatio( window.devicePixelRatio );
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+      <!--PROJECTS-->
+      <article>
+        <h2>Projects</h2>
+        <ul>
+          <li><b>Blackjack, Game, Solver and Fileformat</b></li>
+          <ul>
+            <li>
+              Honestly this is pretty unimpressive but it's a prerequisite of
+              insane things to come
+            </li>
+          </ul>
+          <li><b>Knock Knock</b></li>
+          <ul>
+            <li>
+              Backend has CI/CD with Azure App Service written
+              in Flask using Numpy for calculations of similiary score
+              deployed at <a href="https://kknock.tech">kknock.tech</a>
+              repo on my github called drx_backend
+            </li>
+            <li>
+              Hackathon project, collaborated with 3 other amazing developers at the UTD
+            </li>
+          </ul>
+          <li><b>CAPTCHA Test Automation</b></li>
+          <ul>
+            <li>
+              Collaborated with a crew of 2 other highly driven and mentally
+              focused students at the UTD (Zetamac at least 30) in order to
+              create a mega project emcompassing skills learned over a 10 week
+              program taught by other students at the UTD.
+            </li>
+            <li>
+              We trained a convolutional neural network model in order to
+              bypass real world online CAPTCHA test with 70% accuracy insane
+              result for crazy team
+            </li>
+          </ul>
+          <li><b>Waffle, PDF to Audiobook Converter using AI</b></li>
+          <ul>
+            <li>
+              The title says all you need to know you can check out the source
+              code as well as original post and sample of project in action at
+              the github page <a href="https://github.com/LoganLieou/Waffle">here</a>
+            </li>
+          </ul>
+          <li><b>Facebook Infer, Documentation</b></li>
+          <ul>
+            <li>
+              I wrote highly inconsequential documentation for a large open
+              source project but it's cool because it says facebook therefore
+              it's high impact even if my changing of some words allows just 30
+              more people to be able to build and contribute to the program I
+              have made an impact
+            </li>
+          </ul>
+          <li><b>Zetamac Mobile</b></li>
+          <ul>
+            <li>
+              The cool and innovative arithmetic game application now brought to your phone check out the original game at <a href="https://arithmetic.zetamac.com/">arithmetic.zetamac.com</a> as well as my new and improved on your phone edition at the github repo <a href="https://github.com/LoganLieou/Zetamac-Mobile">here</a>
+            </li>
+          </ul>
+        </ul>
+      </article>
+      <h2>Send Me Your Information (Broken)</h2>
+      <hr/>
+      <form>
+        <div class="grid">
 
-      /*
-      controls initialization and attributes
-      */
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.autoRotate = true;
+          <!-- Markup example 1: input is inside label -->
+          <label for="firstname">
+            First name
+            <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+          </label>
 
-      camera.position.set(0, 5000, 5000);
+          <label for="lastname">
+            Last name
+            <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+          </label>
 
-      let model;
-      loader.load('assets/cursed_rat/scene.gltf', ( gltf ) => {
-        model = gltf;
-        scene.add( model.scene );
-      });
+        </div>
 
+        <!-- Markup example 2: input is after label -->
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Email address" required>
+        <small>I'll always share your email with everyone I know.</small>
 
-      const animate = () => {
-        requestAnimationFrame( animate );
-        controls.update();
-        renderer.render( scene, camera );
-      }
-
-      animate();
-    </script>
+        <!-- Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>
