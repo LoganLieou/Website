@@ -1,3 +1,0 @@
-# Logan Lieou Website
-
-Welcome to my website currently under construction...
