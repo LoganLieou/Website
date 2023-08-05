@@ -7,3 +7,8 @@ of cool an interesting information once I get my hands on it.
 
 Alright I changed it back to markdown why do I keep thinking it's a good idea to
 use html...
+
+## Table of Contents
+
+- [minecraft](./minecraft/minecraft.md)
+- [math](./math/math.md)
