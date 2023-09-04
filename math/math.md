@@ -1,2 +1,0 @@
-# Math
-- [latex](./latex.md)
