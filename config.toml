@@ -1,0 +1,3 @@
+baseURL = 'http://example.org/'
+title = "Logan Site"
+theme = "hugo-theme-texify"
